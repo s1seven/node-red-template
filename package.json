@@ -3,9 +3,14 @@
   "version": "0.0.0",
   "description": "Template to quickly start a new node-red project",
   "main": "node_modules/node-red/red.js",
+  "bin": "node_modules/node-red/red.js",
   "scripts": {
     "start": "node node_modules/node-red/red.js -v --userDir . --settings ./settings.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pkg": "npm rebuild ; pkg . --out-path ./packages",
+    "pkg-macos": "npm rebuild ; pkg . -t node16-macos-x64 --out-path ./packages/Mac/",
+    "pkg-linux": "npm rebuild ; pkg . -t node16-linux-x64 --out-path ./packages/Linux/",
+    "pkg-win": "npm rebuild ; pkg . -t node16-win-x64 --out-path ./packages/Win/"
   },
   "repository": {
     "type": "git",
@@ -25,5 +30,31 @@
     "@s1seven/schema-tools-extract-emails": "^0.3.2",
     "node-red": "^2.2.2",
     "node-red-dashboard": "^3.1.6"
+  },
+  "devDependencies": {
+    "pkg": "^5.6.0"
+  },
+  "pkg": {
+    "scripts": [
+      "node_modules/node-red/red.js",
+      "node_modules/node-red/**/*.js",
+      "node_modules/@node-red/**/*.js",
+      "node_modules/node-red-dashboard/nodes/*.js",
+      "node_modules/node-red-dashboard/*.js"
+    ],
+    "assets": [
+      "node_modules/@node-red/**/*.html",
+      "node_modules/@node-red/**/*.ico",
+      "node_modules/@node-red/**/*.svg",
+      "node_modules/@node-red/**/*.json",
+      "node_modules/@node-red/**/*.css",
+      "node_modules/@node-red/**/*.mst",
+      "node_modules/node-red-dashboard/nodes/*.html",
+      "node_modules/node-red-dashboard/nodes/locales/*",
+      "node_modules/node-red-dashboard/nodes/icons/*.png",
+      "node_modules/node-red-dashboard/dist/**",
+      "node_modules/font-awesome/css/**",
+      "node_modules/material-design-icons-iconfont/dist/**"
+    ]
   }
 }
