@@ -1,0 +1,29 @@
+{
+  "name": "node-red-template",
+  "version": "0.0.0",
+  "description": "Template to quickly start a new node-red project",
+  "main": "node_modules/node-red/red.js",
+  "scripts": {
+    "start": "node node_modules/node-red/red.js -v --userDir . --settings ./settings.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s1seven/node-red-template.git"
+  },
+  "keywords": [
+    "node-red"
+  ],
+  "author": "getlarge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s1seven/node-red-template/issues"
+  },
+  "homepage": "https://github.com/s1seven/node-red-template#readme",
+  "dependencies": {
+    "@s1seven/schema-tools-certificate-summary": "^0.2.2",
+    "@s1seven/schema-tools-extract-emails": "^0.3.2",
+    "node-red": "^2.2.2",
+    "node-red-dashboard": "^3.1.6"
+  }
+}
