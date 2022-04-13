@@ -27,6 +27,27 @@ npm start -- testFlow.json
 
 You can easily add third party nodes by modifying the package.json file. This template include the following dependencies:
 
-- `node-red-dashboard` to build UI
-- `@s1seven/schema-tools-certificate-summary` to extract certificate general information
-- `@s1seven/schema-tools-extract-emails` to get parties involved in a certificate's transaction
+- [node-red-dashboard](https://github.com/node-red/node-red-dashboard)
+- [@s1seven/schema-tools-certificate-summary]
+- [@s1seven/schema-tools-extract-emails]
+- [@s1seven/schema-tools-generate-html]
+- [@s1seven/schema-tools-generate-pdf]
+- [@s1seven/schema-tools-validate]
+
+### Schema-tools
+
+To use `@s1seven/schema-tools-*` packages in a Node-RED function, you can import them using `global.get(<import-name>)`.
+
+| import name         | package                                     |
+| ------------------- | ------------------------------------------- |
+| certificateSummary  | [@s1seven/schema-tools-certificate-summary] |
+| extractEmails       | [@s1seven/schema-tools-extract-emails]      |
+| generateHtml        | [@s1seven/schema-tools-generate-html]       |
+| generatePdf         | [@s1seven/schema-tools-generate-pdf]        |
+| validateCertificate | [@s1seven/schema-tools-validate]            |
+
+[@s1seven/schema-tools-certificate-summary]: https://github.com/s1seven/schema-tools/tree/main/packages/certificate-summary
+[@s1seven/schema-tools-extract-emails]: https://github.com/s1seven/schema-tools/tree/main/packages/extract-emails
+[@s1seven/schema-tools-generate-html]: https://github.com/s1seven/schema-tools/tree/main/packages/generate-html
+[@s1seven/schema-tools-generate-pdf]: https://github.com/s1seven/schema-tools/tree/main/packages/generate-pdf
+[@s1seven/schema-tools-validate]: https://github.com/s1seven/schema-tools/tree/main/packages/validate
