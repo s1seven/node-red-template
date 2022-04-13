@@ -28,6 +28,9 @@
   "dependencies": {
     "@s1seven/schema-tools-certificate-summary": "^0.2.2",
     "@s1seven/schema-tools-extract-emails": "^0.3.2",
+    "@s1seven/schema-tools-generate-html": "^0.2.1",
+    "@s1seven/schema-tools-generate-pdf": "^0.1.1",
+    "@s1seven/schema-tools-validate": "^0.2.9",
     "node-red": "^2.2.2",
     "node-red-dashboard": "^3.1.6"
   },

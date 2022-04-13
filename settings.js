@@ -414,7 +414,12 @@ module.exports = {
    *    global.get("os")
    */
   functionGlobalContext: {
-    // os:require('os'),
+    // os: require('os'),
+    certificateSummary: require('@s1seven/schema-tools-certificate-summary'),
+    extractEmails: require('@s1seven/schema-tools-extract-emails'),
+    generateHtml: require('@s1seven/schema-tools-generate-html'),
+    generatePdf: require('@s1seven/schema-tools-generate-pdf'),
+    validateCertificate: require('@s1seven/schema-tools-validate'),
   },
 
   /** The maximum number of messages nodes will buffer internally as part of their
