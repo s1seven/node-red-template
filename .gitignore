@@ -1,3 +1,5 @@
+.DS_Store
+
 # Logs
 logs
 *.log
@@ -103,9 +105,10 @@ dist
 # TernJS port file
 .tern-port
 
-# Node-red 
+# Node-red
 .config.*.json.backup
 .config.*.json
+projects/
 
 # PKG output
 packages/
